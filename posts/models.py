@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 
-class Post(models.Mode):
+class Post(models.Model):
     title = models.CharField(max_length=256)
     subtitle = models.CharField(max_length=256)
     body = models.TextField()
@@ -17,5 +17,6 @@ class Post(models.Mode):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("home")
+        # return reverse("home")
+        return reverse("post_detail", args=[self.id])
 
