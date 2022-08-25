@@ -1,9 +1,10 @@
-venv
+venv/*
 *__pycache__*
 
 # Se agrego
 staticfiles
 
 .env
-mc?.md
+
 heroku_config.sh
+mc?.md
